@@ -26,12 +26,15 @@
   </div>
 </nav>
 
-<div ng-controller="View2Ctrl" class="standard">
-  <ng-map id="map" zoom="16" center="[51.510919,0.032450]">
+<div ng-controller="View2Ctrl" class="map">
+  <ng-map id="map" zoom="16" center="[51.510919,0.032450]" class="map">
     <marker ng-repeat=" m in markers " position="{{m.address}} " on-click="test() " on-dragend="getCurrentLocation()
     " title="{{m.title}} " draggable="true "></marker>
   </ng-map>
 
+  <div class="standard ">
+    <button class="btn btn-large btn-primary ">Submit</button>
+  </div>
   <div class="location ">
     <lable class="label label-default ">X:</lable>
     <p ng-bind="selectedXLocaltion "></p>
@@ -41,7 +44,4 @@
     <p ng-bind="selectedYLocaltion "></p>
   </div>
 
-  <div class="standard ">
-    <button class="btn btn-large btn-primary ">Submit</button>
-  </div>
 </div>
