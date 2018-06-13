@@ -27,7 +27,7 @@
 </nav>
 
 <div ng-controller="findCtrl" class="standard">
-  <ng-map id="map" zoom="11" center="[40.74, -74.18]">
+  <ng-map id="map" zoom="16" center="[51.510919,0.032450]">
     <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" on-dragend="getCurrentLocation()" title="{{m.title}}"
       draggable="true"></marker>
   </ng-map>
