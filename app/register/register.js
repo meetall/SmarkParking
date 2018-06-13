@@ -9,7 +9,7 @@ angular.module('myApp.register', ['ngRoute', 'ngMap'])
     });
   }])
 
-  .controller('View2Ctrl', function ($scope, NgMap) {
+  .controller('View2Ctrl', function ($scope, NgMap, $http) {
 
     $scope.getCurrentLocation = function (e) {
       $scope.selectedXLocaltion = e.latLng.lat();
@@ -19,5 +19,11 @@ angular.module('myApp.register', ['ngRoute', 'ngMap'])
     $scope.markers = [
       { address: "[51.510919,0.032450]" }
     ];
+
+    $scope.registerParking = function() {
+      $http.get('http://localhost:3000/api/register?userId=1&x=' + $scope.selectedXLocaltion + '&y=' + $scope.selectedYLocaltion,
+      function (response) { $scope.results = response; },
+      function (failure) { console.log("failed :(", failure); });
+    }
 
   });
