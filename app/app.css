@@ -37,6 +37,7 @@
   height :100px;
   margin: 10px;
   font-size: 20px;
+  margin-top: 300px;
 }
 
 .findbar{
@@ -85,4 +86,19 @@ body {
     border: lightgray 1px;
     border-style: solid;
 }
+
+.intro1{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 140px;
+}
+.intro2{
+  font-size: 40px;
+  text-align: center;
+  font-family: fantasy;
+  margin-top: 10px;
+  color: darkgreen;
+}
+
+
 
