@@ -17,7 +17,7 @@ angular.module('myApp.register', ['ngRoute', 'ngMap'])
     }
 
     $scope.markers = [
-      { address: "current-location" }
+      { address: "[51.510919,0.032450]" }
     ];
 
   });

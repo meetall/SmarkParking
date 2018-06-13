@@ -18,10 +18,9 @@ angular.module('myApp.find', ['ngRoute', 'ngMap'])
     }
 
     $scope.markers = [
-      { address: "[40.71, -74.21]" },
-      { address: "[41.71, -72.21]" },
-      { address: "[45.71, -73.21]" },
-      { address: "[41.71, -78.21]" },
+      { address: "[51.510997,0.032628]" },
+      { address: "[51.511008,0.032817]" },
+      { address: "[51.510919,0.032450]" },
     ];
 
   });
