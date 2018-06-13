@@ -9,20 +9,16 @@ angular.module('myApp.view2', ['ngRoute', 'ngMap'])
     });
   }])
 
-  .controller('View2Ctrl', ['$scope', function ($scope, NgMap) {
+  .controller('View2Ctrl', function ($scope, NgMap) {
 
-    $scope.test = function () {
-      // send the coordinate to api
-      console.log($scope.markers[0].getPosition());
+    $scope.getCurrentLocation = function (e) {
+      console.log(e.latLng.lat());
+      console.log(e.latLng.lng());
+
     }
 
     $scope.markers = [
-      { address: "[40.71, -74.21]" },
-      { address: "[40.72, -74.20]" },
+      { address: "[40.71, -74.21]" }
     ];
-    /*NgMap.getMap().then(function (map) {
-      console.log(map.getCenter());
-      console.log('markers', map.markers);
-      console.log('shapes', map.shapes);
-    });*/
-  }]);
+
+  });

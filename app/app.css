@@ -23,3 +23,30 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.standard{
+  margin: 20px;
+  margin-top: 80px;
+}
+
+.stdBtn{
+  width: 50%;
+  height :100px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.wrapper{
+  padding: 20px;
+  display: flex;
+  margin-top: 500px;
+}
+
+.btn-text{
+  font-size: 45px;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+}

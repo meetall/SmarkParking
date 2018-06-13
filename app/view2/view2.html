@@ -1,19 +1,38 @@
-<div ng-controller="View2Ctrl">
+<!-- USING BOOTSTRAP 3.0.3 -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Page</a>
+        </li>
+        <li>
+          <a href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div ng-controller="View2Ctrl" class="standard">
   <ng-map id="map" zoom="11" center="[40.74, -74.18]">
-    <!--<ng-map id="map" center='current-position' geo-fallback-center="[40.74, -74.18]" geo-callback="vm.callbackFunc('you')">-->
-    <!--<marker position="[40.71, -74.21]" title="View2Ctrl.testTitle" on-click="test()"></marker>
-    <marker position="[40.72, -74.20]" title="marker" animation="Animation.DROP"></marker>
-    <marker position="[40.73, -74.19]" title="drag me" draggable="true"></marker>
-    <marker position="[40.74, -74.18]" title="how" animation="Animation.BOUNCE"></marker>
-    <marker position="[40.75, -74.17]" title="are"></marker>
-    <marker position="[40.76, -74.16]" title="you" icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"></marker>
-    <marker position="[40.77, -74.15]" title="from"></marker>
-    <marker position="[40.78, -74.14]" title="allen"></marker>-->
-    <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" title="{{m.title}}" draggable="true"></marker>
+    <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" on-dragend="getCurrentLocation()" title="{{m.title}}"
+      draggable="true"></marker>
   </ng-map>
+
+  <div class="standard">
+    <button class="btn btn-large btn-primary">Submit</button>
+  </div>
 </div>
-<p>
-  This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter: {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
