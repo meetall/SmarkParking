@@ -53,7 +53,7 @@
 
 .location{
   border-style: groove;
-  display: flex;
+  display: none;
   margin: 5px;
 }
 
