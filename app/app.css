@@ -39,6 +39,11 @@
   font-size: 20px;
 }
 
+.findbar{
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
 .wrapper{
   padding: 20px;
   display: flex;
@@ -80,3 +85,4 @@ body {
     border: lightgray 1px;
     border-style: solid;
 }
+
