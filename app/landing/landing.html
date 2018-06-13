@@ -1,39 +1,42 @@
 <!-- USING BOOTSTRAP 3.0.3 -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
+<div class="landing">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Page</a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
     </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav pull-right">
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Page</a>
-        </li>
-        <li>
-          <a href="#">Link</a>
-        </li>
-      </ul>
-    </div>
-    <!--/.nav-collapse -->
-  </div>
-</nav>
+  </nav>
 
-<div class="wrapper">
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
-    <div class="btn-text">Register</div>
+  <div class="wrapper">
+    <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
+      <div class="btn-text">Register</div>
+    </div>
+    <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/find')">
+      <div class="btn-text">Find</div>
+    </div>
+    <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
+      <div class="btn-text">Update</div>
+    </div>
   </div>
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/find')">
-    <div class="btn-text">Find</div>
-  </div>
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
-    <div class="btn-text">Update</div>
-  </div>
+
 </div>
