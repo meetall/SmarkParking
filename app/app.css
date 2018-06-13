@@ -46,6 +46,12 @@
   font-size: 45px;
 }
 
+.location{
+  border-style: groove;
+  display: flex;
+  margin: 5px;
+}
+
 body {
   background-color: #333;
   color: #fff;

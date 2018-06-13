@@ -26,14 +26,22 @@
   </div>
 </nav>
 
-<div class="wrapper">
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/view2')">
-    <div class="btn-text">Register</div>
+<div ng-controller="View2Ctrl" class="standard">
+  <ng-map id="map" zoom="11" center="current-location">
+    <marker ng-repeat=" m in markers " position="{{m.address}} " on-click="test() " on-dragend="getCurrentLocation()
+    " title="{{m.title}} " draggable="true "></marker>
+  </ng-map>
+
+  <div class="location ">
+    <lable class="label label-default ">X:</lable>
+    <p ng-bind="selectedXLocaltion "></p>
   </div>
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/view3')">
-    <div class="btn-text">Find</div>
+  <div class="location ">
+    <lable class="label label-default ">Y:</lable>
+    <p ng-bind="selectedYLocaltion "></p>
   </div>
-  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/view2')">
-    <div class="btn-text">Update</div>
+
+  <div class="standard ">
+    <button class="btn btn-large btn-primary ">Submit</button>
   </div>
 </div>

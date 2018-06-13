@@ -26,13 +26,14 @@
   </div>
 </nav>
 
-<div ng-controller="view3Ctrl" class="standard">
-  <ng-map id="map" zoom="11" center="[40.74, -74.18]">
-    <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" on-dragend="getCurrentLocation()" title="{{m.title}}"
-      draggable="true"></marker>
-  </ng-map>
-
-  <div class="standard">
-    <button class="btn btn-large btn-primary">Submit</button>
+<div class="wrapper">
+  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
+    <div class="btn-text">Register</div>
+  </div>
+  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/find')">
+    <div class="btn-text">Find</div>
+  </div>
+  <div class="btn btn-large btn-primary stdBtn" ng-click="Go('/register')">
+    <div class="btn-text">Update</div>
   </div>
 </div>

@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view3', ['ngRoute', 'ngMap'])
+angular.module('myApp.find', ['ngRoute', 'ngMap'])
 
   .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/view3', {
-      templateUrl: 'view3/view3.html',
-      controller: 'view3Ctrl'
+    $routeProvider.when('/find', {
+      templateUrl: 'find/find.html',
+      controller: 'findCtrl'
     });
   }])
 
-  .controller('view3Ctrl', function ($scope, NgMap) {
+  .controller('findCtrl', function ($scope, NgMap) {
 
     $scope.getCurrentLocation = function (e) {
       console.log(e.latLng.lat());
