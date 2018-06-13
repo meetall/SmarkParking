@@ -9,7 +9,7 @@ angular.module('myApp.view2', ['ngRoute', 'ngMap'])
     });
   }])
 
-  .controller('View2Ctrl', ['$scope', 'ngMap', function ($scope, NgMap) {
+  .controller('View2Ctrl', ['$scope', function ($scope, NgMap) {
 
     $scope.test = function () {
       // send the coordinate to api
@@ -20,9 +20,9 @@ angular.module('myApp.view2', ['ngRoute', 'ngMap'])
       { address: "[40.71, -74.21]" },
       { address: "[40.72, -74.20]" },
     ];
-    NgMap.getMap().then(function (map) {
+    /*NgMap.getMap().then(function (map) {
       console.log(map.getCenter());
       console.log('markers', map.markers);
       console.log('shapes', map.shapes);
-    });
+    });*/
   }]);
