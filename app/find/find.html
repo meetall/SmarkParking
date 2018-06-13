@@ -12,13 +12,13 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav pull-right">
         <li class="active">
-          <a href="#">Home</a>
+          <a href="#!/register">Register</a>
         </li>
         <li>
-          <a href="#">Page</a>
+          <a href="#!/find">Find</a>
         </li>
         <li>
-          <a href="#">Link</a>
+          <a href="#!/register">Update</a>
         </li>
       </ul>
     </div>
@@ -26,15 +26,15 @@
   </div>
 </nav>
 
-<div ng-controller="findCtrl" class="standard">
+<div ng-controller="findCtrl" class="standard map">
   <div class="findbar">
     <input class="postcode" placeholder="PostCode" />
     <button class="btn btn-large btn-primary">Find</button>
   </div>
 
-  <ng-map id="map" zoom="16" center="[51.510919,0.032450]">
-    <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" on-dragend="getCurrentLocation()" title="{{m.title}}"
-      draggable="true"></marker>
+  <ng-map id="map" zoom="17" center="[51.510919,0.032450]" class="map">
+    <marker position="[51.510919,0.032450]"></marker>
+    <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" title="{{m.title}}" icon="https://cdn3.iconfinder.com/data/icons/mapicons/icons/parking.png"></marker>
   </ng-map>
 
 
