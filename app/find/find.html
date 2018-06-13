@@ -27,12 +27,15 @@
 </nav>
 
 <div ng-controller="findCtrl" class="standard">
+  <div class="standard">
+    <input class="postcode" placeholder="PostCode" />
+    <button class="btn btn-large btn-primary">Find</button>
+  </div>
+
   <ng-map id="map" zoom="16" center="[51.510919,0.032450]">
     <marker ng-repeat="m in markers" position="{{m.address}}" on-click="test()" on-dragend="getCurrentLocation()" title="{{m.title}}"
       draggable="true"></marker>
   </ng-map>
 
-  <div class="standard">
-    <button class="btn btn-large btn-primary">Submit</button>
-  </div>
+
 </div>

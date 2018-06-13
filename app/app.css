@@ -71,3 +71,9 @@ body {
     font-size: 20px;
   }
 }
+
+.postcode{
+  width: 82%;
+    border: lightgray 1px;
+    border-style: solid;
+}
