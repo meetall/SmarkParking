@@ -1,4 +1,5 @@
 <!-- USING BOOTSTRAP 3.0.3 -->
+<div  ng-controller="View2Ctrl">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -7,6 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div class="nav-label">
+          <label class="label">Token: <button class="badge" ng-model="token">{{token}}</button> </label>
+      </div>
       <a class="navbar-brand" href="#">Logo</a>
     </div>
     <div class="collapse navbar-collapse">
@@ -26,7 +30,7 @@
   </div>
 </nav>
 
-<div ng-controller="View2Ctrl" class="map">
+<div class="map">
   <ng-map id="map" zoom="16" center="[51.510919,0.032450]" class="map">
     <marker ng-repeat=" m in markers " position="{{m.address}} " on-click="test() " on-dragend="getCurrentLocation()
     " title="{{m.title}} " draggable="true "></marker>
@@ -44,4 +48,5 @@
     <p ng-bind="selectedYLocaltion "></p>
   </div>
 
+</div>
 </div>
