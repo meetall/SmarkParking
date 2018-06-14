@@ -11,7 +11,8 @@ angular.module('myApp.register', ['ngRoute', 'ngMap'])
 
   .controller('View2Ctrl', function ($scope, NgMap, $http) {
 
-    $scope.token = 2;
+   
+      $scope.token = 42;
     $scope.getCurrentLocation = function (e) {
       $scope.selectedXLocaltion = e.latLng.lat();
       $scope.selectedYLocaltion = e.latLng.lng();
@@ -22,14 +23,15 @@ angular.module('myApp.register', ['ngRoute', 'ngMap'])
     ];
 
     $scope.registerParking = function () {
-      $http.get('http://localhost:3000/api/register?userId=1&x=' + $scope.selectedXLocaltion + '&y=' + $scope.selectedYLocaltion)
+      $http.get('http://localhost:3000/api/register?userId=2&x=' + $scope.selectedXLocaltion + '&y=' + $scope.selectedYLocaltion)
       .then(
         function (response) {
           console.log(response.data.token);
           $scope.token = response.data.token;
-          //$scope.$apply();
         },
         function (failure) { console.log("failed :(", failure); });
     }
-
+  
+    
+    
   });
