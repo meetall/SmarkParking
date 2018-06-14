@@ -32,27 +32,28 @@
   margin-top: 20px;
 }
 
-.stdBtn{
-  width: 50%;
-  height :100px;
-  margin: 10px;
-  font-size: 20px;
-  margin-top: 300px;
-}
-
 .findbar{
   padding-top: 60px;
   padding-bottom: 10px;
 }
 
-.wrapper{
-  padding: 20px;
+.flex-btn{
   display: flex;
-  margin-top: 50px;
-  background-image: url(https://www.colchester.gov.uk/parking-permit-kb-image);
-  height: 300px;
 }
 
+.wrapper{
+  padding: 1px;
+  margin-top: 2px;
+  height: 400px;
+}
+.image{
+  padding: 5px;
+  display: block;
+  margin-top: 0px;
+  background-image: url(https://www.colchester.gov.uk/parking-permit-kb-image);
+  height: 300px;
+  width:100%;
+}
 .btn-text{
   font-size: 45px;
 }
@@ -73,12 +74,25 @@ body {
     display: block;
   }
 
+  .flex-btn{
+    display: block;
+  }
   .stdBtn{
-    width: 100%;
-    height :auto;
-    margin: 10px;
+    width: 100% !important;
+    height :auto !important;
+    margin: 2px !important;
+    font-size: 10px !important;
+    margin-top: 0px !important;
+   }
+  .btn-text{
     font-size: 20px;
   }
+}
+.stdBtn{
+  width: 50%;
+  height :100px;;
+  margin: 10px;
+  font-size: 20px;
 }
 
 .postcode{
@@ -88,9 +102,9 @@ body {
 }
 
 .intro1{
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 50px;
 }
 .intro2{
   font-size: 40px;
