@@ -100,5 +100,10 @@ body {
   color: darkgreen;
 }
 
+.nav-label{
+  float: right;
+  margin-top:15px;
+}
+
 
 
